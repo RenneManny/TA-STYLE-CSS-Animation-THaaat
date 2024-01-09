@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    perspective: 1000px;
+}
+
+.cube2, .cube3 {
+    width: 100px;
+    height: 100px;
+    background-color: yellowgreen;
+    margin: 20px;
+    display: inline-block;
+    transition: transform 1s ease-out;
+}
+
+.cube3 {
+    transform-style: preserve-3d;
+}
+
+.container:hover .cube2 {
+    transform: rotate(360deg);
+}
+
+.container:hover .cube3 {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+}
